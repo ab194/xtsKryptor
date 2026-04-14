@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xtskryptor"
+version = "0.1.0"
+description = "Authenticated AES-XTS archive encryption for files and folders."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "xtsKryptor maintainers" }
+]
+keywords = ["aes", "xts", "encryption", "archive", "cli"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Security :: Cryptography",
+  "Topic :: System :: Archiving",
+]
+dependencies = [
+  "cryptography>=41.0.0",
+]
+
+[project.scripts]
+xtskryptor = "xtskryptor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
